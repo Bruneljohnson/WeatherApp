@@ -1,14 +1,12 @@
 # 💻 Application Overview
 
-The application is weather App. Users can search for the weather forecasts for cities around the global and in their current location, and it will show hourly and daily forecasts.
-
-The default location is the users current location, if location permissions are allowed.
+The application is weather App. Users can search for the weather forecasts for cities around the global and in their current location, and it will show hourly and daily forecasts. User's can also see there current locations weather information if location permissions are granted.
 
 ## Demo
 
 ---
 
-[Demo](https://bruneljohnson.github.io/WeatherApp/)
+To view the demo please click here. [Demo](https://bruneljohnson.github.io/WeatherApp/)
 
 ## Get Started
 
@@ -17,9 +15,8 @@ The default location is the users current location, if location permissions are 
 To set up the app execute the following commands.
 
 ```
-git clone https://github.com/alan2207/bulletproof-react.git
-cd bulletproof-react
-cp .env.example .env
+git clone https://github.com/Bruneljohnson/WeatherApp.git
+cd weather-app
 npm install
 npm start
 Runs the app in the development mode.
@@ -60,15 +57,26 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Builds the app for production to the `build` folder and is ready to be published on `github pages`. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Your app is ready to be deployed!
+### Start TypeScript Compiler
 
-See the section about deployment for more information.
+Run `tsc -w` at the root of the project. This runs the TypeScript Compiler in WatchMode. This project has been set to watch all .ts,.tsx files within the project directory.
 
-## Enviroment Variables
+## Packages
+
+---
+
+`luxon`: Date & Time handling Library,
+`msw`: Mock API calls in testing,
+`@iconscout/react-unicons`: Icon Library,
+`TailwindCSS` : CSS framework.
 
 ## Learn More
 
 ---
+
+For more information about `TypeScript` visit [typescriptlang.org/docs](https://www.typescriptlang.org/docs/handbook/react.html)
+
+For more information about [TailwindCSS] visit [TailwindCSS.com](https://tailwindcss.com/docs/installation)
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
