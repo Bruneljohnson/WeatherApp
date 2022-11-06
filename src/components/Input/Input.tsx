@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import { IHTMLINPUTProps } from "../../types/UIProps.model";
-import { getCurrentLocationHandler, splitErrorMessage } from "../../helpers";
+import { getCurrentLocationHandler } from "../../helpers";
 
 export const Input: React.FC<IHTMLINPUTProps> = ({
   setQuery,
@@ -28,25 +28,7 @@ export const Input: React.FC<IHTMLINPUTProps> = ({
    */
   /** */
   const locationHandler = async () => {
-    try {
-      const response = await navigator.permissions.query({
-        name: "geolocation",
-      });
-      if (response.state === "granted") {
-        getCurrentLocationHandler(setQuery);
-      } else {
-        throw new Error(
-          "We tried to accces your current location, but access was denied./Please allow access and try again."
-        );
-      }
-    } catch (error: any) {
-      const message = splitErrorMessage(error.message);
-      setError({
-        title: "Denied access to your current location.",
-        message,
-        isError: true,
-      });
-    }
+    getCurrentLocationHandler(setQuery);
   };
 
   /**

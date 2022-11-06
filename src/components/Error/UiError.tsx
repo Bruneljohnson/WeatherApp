@@ -13,22 +13,14 @@ export const UIError: React.FC<IErrorProps> = ({
    * sets Error state to default.
    * @return setQuery({lat,lon}) - sets Query state to users current location.
    */
-  const clearErrorHandler = async () => {
-    try {
-      setError({
-        title: "",
-        message: [""],
-        isError: false,
-      });
-      const response = await navigator.permissions.query({
-        name: "geolocation",
-      });
-      if (response.state === "granted") {
-        getCurrentLocationHandler(setQuery);
-      } else return;
-    } catch (error) {
-      return;
-    }
+  const clearErrorHandler = () => {
+    setError({
+      title: "",
+      message: [""],
+      isError: false,
+    });
+
+    getCurrentLocationHandler(setQuery);
   };
 
   return (
